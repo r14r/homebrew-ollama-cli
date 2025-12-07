@@ -23,5 +23,3 @@ class OllamaCli < Formula
     assert_match "Inspect Ollama blobs", output
   end
 end
-
-
