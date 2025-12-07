@@ -2,7 +2,7 @@ class OllamaCli < Formula
   desc "Ollama blob + manifest inspector with orphan detection"
   homepage "https://github.com/r14r/ollama-cli"
   url "https://github.com/r14r/ollama-cli/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "<FILL_ME_IN>"
+  sha256 "90f999cfd06a5ff8b7a4b40933316ae37a7fd1ea8e8d45e87f731ad56e2819aa"
   license "MIT"
 
   depends_on "python@3.11"
