@@ -1,24 +1,17 @@
 class OllamaCli < Formula
-  desc "Ollama blob + manifest inspector with orphan detection, table/csv output, progress bar"
-  homepage "https://github.com/<youruser>/ollama-cli"
-  # You must upload ollama-cli.py to GitHub and adjust this URL + SHA
-  url "https://raw.githubusercontent.com/<youruser>/ollama-cli/main/ollama-cli.py"
-  sha256 "<FILL_THIS_IN_AFTER_UPLOAD>"
-
+  desc "Ollama blob + manifest inspector with orphan detection"
+  homepage "https://github.com/r14r/ollama-cli"
+  url "https://github.com/r14r/ollama-cli/archive/refs/tags/v1.0.0.tar.gz"
+  sha256 "<FILL_ME_IN>"
   license "MIT"
 
-  depends_on "python@3.11" => :recommended
+  depends_on "python@3.11"
 
   def install
-    # Install script as executable
     bin.install "ollama-cli.py" => "ollama-cli"
-
-    # Ensure the script is executable
-    chmod 0755, bin/"ollama-cli"
   end
 
   test do
-    # Basic test: Should print help
     output = shell_output("#{bin}/ollama-cli --help")
     assert_match "Inspect Ollama blobs", output
   end
